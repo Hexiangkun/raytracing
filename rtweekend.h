@@ -9,11 +9,6 @@
 
 #include <random>
 
-// Common Headers
-
-#include "ray.h"
-#include "vec3.h"
-#include "interval.h"
 
 // Usings
 
