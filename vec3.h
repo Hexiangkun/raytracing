@@ -50,7 +50,7 @@ public:
 
 // point3 is just an alias for vec3, but useful for geometric clarity in the code.
 using point3 = vec3;
-
+using color = vec3;
 
 // Vector Utility Functions
 
@@ -99,13 +99,8 @@ inline vec3 unit_vector(vec3 v) {
 }
 
 
-using color = vec3;
 
-void write_color(std::ostream& out, color pixel_color) {
-    // Write the translated [0,255] value of each color component.
-    out << static_cast<int>(255.999 * pixel_color.x()) << ' '
-        << static_cast<int>(255.999 * pixel_color.y()) << ' '
-        << static_cast<int>(255.999 * pixel_color.z()) << '\n';
-}
+
+
 
 #endif
