@@ -1,11 +1,16 @@
 ﻿#pragma once
 #include "hittable.h"
 #include "vec3.h"
+#include <memory>
 
 class sphere : public hittable
 {
 public:
-	sphere(point3 _center, double _radius) : center(_center), radius(_radius) {}
+	sphere(point3 _center, double _radius,std::shared_ptr<material> _material) 
+			: center(_center), radius(_radius), mat(_material)
+	{
+	
+	}
 	~sphere() = default;
 
 
@@ -39,6 +44,7 @@ public:
 
 		rec.t = root;
 		rec.p = r.at(rec.t);
+		rec.mat = mat;
 		vec3 outward_normal = (rec.p - center) / radius;
 		rec.set_face_normal(r, outward_normal);
 		return true;
@@ -47,4 +53,5 @@ public:
 private:
 	point3 center;
 	double radius;
+	std::shared_ptr<material> mat;
 };
