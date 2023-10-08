@@ -1,4 +1,5 @@
 ﻿  main.cpp
 E:\vsproject\raytracing\material.h(6,17): warning C4099: “hit_record”: 类型名称以前使用“struct”现在使用的是“class”
 E:\vsproject\raytracing\hittable.h(8): message : 参见“hit_record”的声明
-  raytracing.vcxproj -> E:\vsproject\raytracing\x64\Debug\raytracing.exe
+C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\Microsoft.CppCommon.targets(1094,5): error MSB6006: “link.exe”已退出，代码为 1168。
+LINK : fatal error LNK1168: 无法打开 E:\vsproject\raytracing\x64\Debug\raytracing.exe 进行写入
